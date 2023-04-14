@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Чтение текста из файла и вставка на сайт</title>
+  </head>
+  <body>
+    <p id="text"></p>
+    <script>
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "Adidas Gazele.rtf", true);
+      xhr.onload = function() {
+        if (xhr.status === 200) {
+          document.getElementById("Adidas Gazele").innerHTML = xhr.responseText;
+        }
+      };
+      xhr.send();
+    </script>
+  </body>
+</html>
